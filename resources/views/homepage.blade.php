@@ -30,7 +30,7 @@
                         <li>Dagdelen: {{ $package->lessons }} dagdeel</li>
                         <li>inclusief alle materialen</li>
                         <li>
-                            <a class="btn" href="reserveren/{{ $package->id }}">Kies pakket</a>
+                            <a class="btn" href="reserve/{{ $package->id }}">Kies pakket</a>
                             <p>€{{ round($package->price) }}</p>
                         </li>
                     </ul>

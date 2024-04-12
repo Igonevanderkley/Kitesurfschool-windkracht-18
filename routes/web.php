@@ -3,13 +3,9 @@
 use App\Http\Controllers\ProfileController;
 use App\Models\Packages;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\HomepageController;
 
-Route::get('/', function () {
-    $packages = Packages::all();
-    return view('homepage', [
-        'packages' => $packages
-    ]);
-});
+Route::get('/', [HomepageController::class, 'index'])->name('homepage');
 
 Route::get('reserveren/{slug}', function ($packageId) {
     $chosenPackage = Packages::find($packageId);

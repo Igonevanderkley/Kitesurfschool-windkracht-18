@@ -4,15 +4,11 @@ use App\Http\Controllers\ProfileController;
 use App\Models\Packages;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HomepageController;
+use App\Http\Controllers\ReservationController;
 
 Route::get('/', [HomepageController::class, 'index'])->name('homepage');
 
-Route::get('reserveren/{slug}', function ($packageId) {
-    $chosenPackage = Packages::find($packageId);
-    return view('reserveren', [
-        'chosenPackage' => $chosenPackage
-    ]);
-});
+Route::get('reserve/{slug}', [ReservationController::class, 'index'])->name('reservation');
 
 Route::get('personal-information', function () {
     return view('personal-information');

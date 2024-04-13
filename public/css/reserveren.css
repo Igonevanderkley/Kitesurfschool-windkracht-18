@@ -12,8 +12,12 @@ li:first-child {
 
 ul {
     border-bottom: 1px solid black;
+    width: 40rem;
 }
 
+li {
+    margin: 1rem;
+}
 .form {
     display: flex;
     flex-direction: column;
@@ -21,5 +25,30 @@ ul {
 }
 
 form {
-    width: 30rem;
+    padding: 1rem;
+
+    width: 40rem;
+}
+
+.blue-button {
+    margin-top: 1rem;
+
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #3498db;
+    /* Blue color */
+    color: #fff;
+    /* Text color */
+    border: none;
+    border-radius: 5px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.basic-data {
+    display: flex;
+    justify-content: space-between;
 }

@@ -9,4 +9,10 @@ class Packages extends Model
 {
     use HasFactory;
 
+
+    public function Reservations()
+    {
+        return $this->hasMany(Reservation::class);
+    }
+
 }

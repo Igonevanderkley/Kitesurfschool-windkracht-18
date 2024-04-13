@@ -18,9 +18,9 @@ return new class extends Migration
             $table->string('location');
             $table->date('date');
             $table->time('time');
-            $table->string('secondary_person_name');
-            $table->string('secondary_person_street');
-            $table->string('secondary_person_hometown');
+            $table->string('secondary_person_name')->nullable();
+            $table->string('secondary_person_street')->nullable();
+            $table->string('secondary_person_hometown')->nullable();
             $table->boolean('is_paid');
             $table->timestamps();
         });

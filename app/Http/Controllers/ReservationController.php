@@ -47,6 +47,6 @@ class ReservationController extends Controller
         $reservation->is_paid = false;
         $reservation->save();
 
-        return redirect()->route('/reservations');
+        return redirect()->route('/reservation');
     }
 }
